@@ -1,7 +1,12 @@
+import dotenv from "dotenv";
 import axios from "axios";
 
-export default async function getRemote(url) {
-    const response = await axios.get(url, {
+dotenv.config();
+
+const REMOTE_URL = process.env.REMOTE_URL;
+
+export default async function getRemote() {
+    const response = await axios.get(REMOTE_URL, {
         params: {
             _limit: 2
         }
