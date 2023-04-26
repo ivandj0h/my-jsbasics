@@ -1,6 +1,7 @@
 import getRemote from "./utils/getremote.js";
+
 const App = async () => {
-    await getRemote("https://jsonplaceholder.typicode.com/posts");
+    await getRemote();
 }
 
 export default App;
